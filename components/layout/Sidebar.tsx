@@ -1,6 +1,7 @@
 import {BsHouseFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa'
 import SidebarLogo from "./SidebarLogo";
+// function in the number
 const Sidebar = () => {
     const items = [
         {
@@ -11,7 +12,7 @@ const Sidebar = () => {
         {
             label: 'Notifications',
             href: '/notifications',
-            icon: BsBellFill
+            icon: BsHouseFill
         },
         {
             label: 'Profile',
@@ -24,6 +25,12 @@ const Sidebar = () => {
             <div className="flex flex-col items-end">
                 <div className="space-y-2 lg:w-[2]">
                     <SidebarLogo/>
+                      {items.map((item) => (
+                      <Sidebar
+                        key={item.href}
+
+              />
+                      ))}
                 </div>
             </div>
         </div>
